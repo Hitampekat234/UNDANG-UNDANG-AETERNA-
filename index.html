@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="title-box">
+  <h1>👮UNDANG UNDANG POLISI AETERNA👮</h1>
+</div>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1 class="judul">   </h1>
+
+  <div class="form-container">
+    <!-- Form Identitas -->
+    <div class="form-group">
+      <label for="namaPelaku">Nama Pelaku:</label>
+      <input type="text" id="namaPelaku">
+    </div>
+    <div class="form-group">
+      <label for="nik">NIK:</label>
+      <input type="text" id="nik">
+    </div>
+    <div class="form-group">
+      <label for="waktuTanggal">Waktu & Tanggal:</label>
+      <input type="text" id="waktuTanggal" readonly>
+    </div>
+    <div class="form-group">
+      <label for="lokasi">Lokasi Penangkapan:</label>
+      <input type="text" id="lokasi">
+    </div>
+    <div class="form-group">
+      <label for="namaPetugas">Nama Petugas:</label>
+      <input type="text" id="namaPetugas">
+    </div>
+    <div class="form-group">
+      <label for="pangkat">Pangkat:</label>
+      <input type="text" id="pangkat">
+    </div>
+    <div class="form-group">
+      <label for="devisi">Devisi:</label>
+      <input type="text" id="devisi">
+    </div>
+    <div class="form-group">
+      <label for="narasi">Narasi:</label>
+      <textarea id="narasi"></textarea>
+    </div>
+      
+   <p class="note">NOTE : MAX PENJARA 60 BULAN</p>
+<p class="dev">DEV BY : Teddy Abimana</p>
+<p class="support">SUPORT BY : Simon Beban</p>
+      
+          <div class="total-hukuman-container">
+  <h6>Total Denda: <span id="totalDenda">0</span></h6>
+  <h6>Total Penjara: <span id="totalPenjara">0</span> bulan</h6>
+</div>
+    
+      
+          <button onclick="submitForm()">Submit</button>
+  </div>
+
+  <!-- Tempat History/Laporan -->
+  <div id="history" class="history-container"></div>
+
+    <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+        
+    </table>
+            <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+      <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+        
+    </table>
+            <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+      <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+        
+    </table>
+            <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+      <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+        
+    </table>
+            <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+                  <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+                  <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+                  <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+                  <!-- Tabel Tindak Pidana (Contoh: Tindak Pidana Nyawa) -->
+    <h2 class="sedang">TINDAK PIDANA NYAWA</h2>
+    <table class="sedangTable" border="1">
+      <tr class="sedang2">
+        <th>UU</th>
+        <th>CEKLIS</th>
+        <th>PELANGGARAN</th>
+        <th>DENDA</th>
+        <th>PENJARA</th>
+      </tr>
+      <tr>
+        <td>7.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="10000" data-penjara="0">
+        </td>
+        <td>TERORISME</td>
+        <td>10000</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="7000" data-penjara="90">
+        </td>
+        <td>PERCOBAAN TERORISME</td>
+        <td>7000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.1.A</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="8000" data-penjara="90">
+        </td>
+        <td>PEMBUNUHAN</td>
+        <td>8000</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>8.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="5000" data-penjara="35">
+        </td>
+        <td>PERCOBAAN PEMBUNUHAN</td>
+        <td>5000</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>9.1</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="4000" data-penjara="30">
+        </td>
+        <td>PENODONGAN WARGA SIPIL</td>
+        <td>4000</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>9.2</td>
+        <td>
+          <input type="checkbox" class="CEKLIS" data-denda="3000" data-penjara="30">
+        </td>
+        <td>PENYANDERAAN</td>
+        <td>3000</td>
+        <td>30</td>
+      </tr>
+    </table>
+
+
+
+</body>
+</html>
