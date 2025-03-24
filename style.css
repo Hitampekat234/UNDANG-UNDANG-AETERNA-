@@ -13,7 +13,7 @@ body {
 }
 .title-box {
 border: 4px double #000;        /* Border hitam */
-  padding: 10px;                 /* Jarak antara konten dan border */
+  padding: 8px;                 /* Jarak antara konten dan border */
   margin: auto;             /* Center secara horizontal dan margin vertikal */
   max-width: 400px;              /* Lebar maksimal box */
   text-align: center;            /* Teks di tengah */
@@ -106,7 +106,8 @@ th {
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    border: 2px solid black;
+    
+    border: 4px double #000;  
 }
 
 /* Container Total Hukuman di tengah dengan box border */
@@ -157,6 +158,21 @@ h3 {
   text-align: center; /* Semua teks di dalam container di-center */
 }
 
+}
+/* css total denda dan penjara */
+.total-penjara{
+  width: 90%;
+    padding: 5px;
+    background-color: cyan;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  border: 4px double #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center; /* Semua teks di dalam container di-center */
+}
+
 /* css total denda dan penjara */
 .total-hukuman-container h3 {
   margin-bottom: 15px;
@@ -184,7 +200,8 @@ button:hover {
   background-color: bisque;         /* Latar belakang putih */
   border: 2px solid #333;         /* Border hitam dengan ketebalan 2px */
   border-radius: 8px;             /* Sudut melengkung */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Bayangan lembut di sekitar box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+border: 4px double #000;      /* Bayangan lembut di sekitar box */
 }
 /* buat Laporan Penangkapan */
 #history h3 {
@@ -192,13 +209,15 @@ button:hover {
   margin-bottom: 1px;
   font-size: 1.0rem;
   color:  crimson;
+    
 }
 
 #history p {
   font-size: 1rem;
 line-height: 0,1;
   margin: 10px 0;
-  line-height: 0.9;
+  line-height: 1.5;
+    
 
 }
 /* buat Input nama suspact Css */
@@ -210,8 +229,23 @@ line-height: 0,1;
   padding: 20px;
   border: 2px solid #333;
   background-color: white;
+    border: 4px double #000;  
   text-align: left;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }/* Efek bayangan lembut */
+
+/* BOX LAPORAN PELAKU*/
+h5 {
+   
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: gray;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 4px double #000;
+    cursor: pointer;  
 }
+
