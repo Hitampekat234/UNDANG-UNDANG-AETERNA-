@@ -192,35 +192,31 @@ h6 {
 }
 button:hover {
     background-color: darkgray;
+    
 }
-/* History background laporan penangkapan */
+
 #history {
-  max-width: 400px;               /* Lebar maksimal box */
-  margin: 20px auto;              /* Center box secara horizontal dengan margin atas dan bawah 20px */
-  padding: 20px;                  /* Jarak antara konten dan border */
-  background-color: bisque;         /* Latar belakang putih */
-  border: 2px solid #333;         /* Border hitam dengan ketebalan 2px */
-  border-radius: 8px;             /* Sudut melengkung */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-border: 4px double #000;      /* Bayangan lembut di sekitar box */
+  max-width: 800px;  /* Menambah lebar box */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: bisque;
+  border: 4px double #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* buat Laporan Penangkapan */
+
 #history h3 {
   text-align: center;
-  margin-bottom: 1px;
-  font-size: 0.9rem;
-  color:  crimson;
-    
+  font-size: 1rem;
+  color: crimson;
 }
 
 #history p {
-  font-size: 0.7rem;
-line-height: 0,1;
-  margin: 10px 0;
-  line-height: 1.5;
-    
-
+  font-size: 0.8rem;
+  line-height: 1;  /* Mengurangi jarak antar baris */
+  margin: 5px 0;   /* Mengurangi jarak antar paragraf */
 }
+
 /* buat Input nama suspact Css */
 
 .form-container {
