@@ -208,13 +208,13 @@ border: 4px double #000;      /* Bayangan lembut di sekitar box */
 #history h3 {
   text-align: center;
   margin-bottom: 1px;
-  font-size: 0.3rem;
+  font-size: 0.9rem;
   color:  crimson;
     
 }
 
 #history p {
-  font-size: 0.3rem;
+  font-size: 0.7rem;
 line-height: 0,1;
   margin: 10px 0;
   line-height: 1.5;
