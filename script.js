@@ -55,7 +55,7 @@ function submitForm() {
 
   // Buat laporan dalam format HTML menggunakan elemen <p>
   let hasil = `
-    <h3>🥷LAPORAN PENANGKAPAN🥷 </h3>
+    <h5>🥷LAPORAN PENANGKAPAN🥷 </h5>
     <p><strong>Nama Pelaku:</strong> ${namaPelaku}</p>
     <p><strong>NIK:</strong> ${nik}</p>
     <p><strong>Waktu & Tanggal:</strong> ${waktuTanggal}</p>
